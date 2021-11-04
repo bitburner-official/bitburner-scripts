@@ -1,0 +1,11 @@
+export async function main(ns) {
+    const names = ns.gang.getMemberNames();
+
+    function doTerritory(name) {
+        ns.gang.setMemberTask(name, 'Train Combat');
+           }
+
+    {names.forEach(doTerritory);
+        await ns.sleep(1);
+    }
+ns.tail();}

@@ -1,0 +1,11 @@
+export async function main(ns) {
+    const names = ns.gang.getMemberNames();
+
+    function doVigil(name) {
+        ns.gang.setMemberTask(name, 'Vigilante Justice');
+           }
+
+    {names.forEach(doVigil);
+        await ns.sleep(1);
+    }
+ns.tail();}

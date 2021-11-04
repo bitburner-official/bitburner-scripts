@@ -1,0 +1,15 @@
+/**
+ * @param {NS} ns
+ **/
+export async function main(ns) {
+    var ter = ns.gang.getGangInformation().territory;
+    var terPer= ns.nFormat(ter,"0.000%")
+    let cap = ns.nFormat(1,"0.000%");
+    ns.exec("GANGWAR.ns","home",1);
+    ns.gang.setTerritoryWarfare("engage");
+
+    while(cap<terPer,ns){
+      ns.gang.getGangInformation().territory;
+      ns.toast("TERRITORY BELOW CAP: "+`${ns.nFormat(ter,"0.000%")}`,"warning")
+      await ns.sleep(60000)}
+}

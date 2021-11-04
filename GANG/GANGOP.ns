@@ -1,0 +1,13 @@
+export async function main(ns) {
+    const names = ns.gang.getMemberNames();
+
+    function doAscend(name) {
+        ns.gang.purchaseEquipment(name, 'Baseball Bat');
+        ns.gang.ascendMember(name);
+    }
+
+    while (true) {
+        names.forEach(doAscend);
+        await ns.sleep(1);
+    }
+ns.tail();}

@@ -1,0 +1,11 @@
+export async function main(ns) {
+    const names = ns.gang.getMemberNames();
+
+    function doTerror(name) {
+        ns.gang.setMemberTask(name, 'Ethical Hacking');
+           }
+
+    {names.forEach(doTerror);
+        await ns.sleep(1);
+    }
+ns.tail();}
