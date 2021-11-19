@@ -19,10 +19,14 @@ function recursiveScan(ns, parent, server, target, route) {
 }
 
 export async function main(ns) {
+    const args = ns.flags([["help", false]]);
     let route = [];
-    let server = ns.args[0];
-    if (!server) {
+    let server = args._[0];
+    if (!server || args.help) {
+        ns.tprint("This script helps you find a server on the network and shows you the path to get to it.");
         ns.tprint(`Usage: ${ns.getScriptName()} SERVER`);
+        ns.tprint("Example:");
+        ns.tprint(`> run ${ns.getScriptName()} foodnstuff`);
         return;
     }
 

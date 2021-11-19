@@ -1,12 +1,16 @@
 export async function main(ns) {
-    ns.tail();
     const flags = ns.flags([
         ['refreshrate', 200],
+        ['help', false],
     ])
-    if (flags._.length === 0) {
+    if (flags._.length === 0 || flags.help) {
+        ns.tprint("This script helps visualize the money and security of a server.");
         ns.tprint(`USAGE: run ${ns.getScriptName()} SERVER_NAME`);
+        ns.tprint("Example:");
+        ns.tprint(`> run ${ns.getScriptName()} foodnstuff`)
         return;
     }
+    ns.tail();
     ns.disableLog('ALL');
     while (true) {
         const server = flags._[0];
