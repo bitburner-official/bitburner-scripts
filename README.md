@@ -8,4 +8,4 @@ Most of these scripts can be run with `--help` to explain what they do and how t
 
 Example:
 
-	run find.js --help
+	run find_server.js --help
