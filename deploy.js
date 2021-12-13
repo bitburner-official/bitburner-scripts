@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 export async function main(ns) {
 	const args = ns.flags([["help", false]]);
-	if (args.help || args._.length < 3) {
+	if (args.help || args._.length < 2) {
 		ns.tprint("This script deploys another script on a server with maximum threads possible.");
 		ns.tprint(`Usage: run ${ns.getScriptName()} HOST SCRIPT ARGUMENTS`);
 		ns.tprint("Example:");
