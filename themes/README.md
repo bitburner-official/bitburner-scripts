@@ -15,3 +15,10 @@
 * Preview: ![Untitled](preview/bossboo-untitled.png)
 
 ---
+
+### Darcula
+* Author: Bossboo
+* Link: [Theme](bossboo-darcula.json)
+* Preview: ![Untitled](preview/bossboo-darcula.png)
+
+---
