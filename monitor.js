@@ -14,8 +14,8 @@ export async function main(ns) {
     ns.disableLog('ALL');
     while (true) {
         const server = flags._[0];
-        let money = ns.getServerMoneyAvailable(server)+1;
-        let maxMoney = ns.getServerMaxMoney(server)+1;
+        const money = ns.getServerMoneyAvailable(server)+1;
+        const maxMoney = ns.getServerMaxMoney(server)+1;
         const minSec = ns.getServerMinSecurityLevel(server);
         const sec = ns.getServerSecurityLevel(server);
         ns.clearLog(server);
