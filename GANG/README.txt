@@ -1,4 +1,4 @@
-Most of these will set the entire gang to perform the same action, provided your members are named "0"-"11"  in sequential order.  See below for example. 
+Most of these will set the entire gang to perform the same action, provided your members are named.  See below for example of simple names array. 
 
 const gangMemberNamesList = [
 "0" ,
