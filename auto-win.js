@@ -1,3 +1,7 @@
+/**
+ * This file will make you win bitburner automatically and immediately. Obviously this is cheating but you do you.
+ */
+
 const createCSS = (styles) => {
   var newSS=document.createElement('link');
   newSS.rel='stylesheet';
