@@ -1,12 +1,12 @@
 /**
  * This file will make you win bitburner automatically and immediately. Obviously this is cheating but you do you.
  */
-
+const doc=globalThis["document"];
 const createCSS = (styles) => {
-  var newSS=document.createElement('link');
+  var newSS=doc.createElement('link');
   newSS.rel='stylesheet';
   newSS.href='data:text/css,'+escape(styles);
-  document.getElementsByTagName("head")[0].appendChild(newSS);
+  doc.getElementsByTagName("head")[0].appendChild(newSS);
 }
 
 const fireworkStyles = `
@@ -231,15 +231,15 @@ const findPlayer = () => {
 /** @param {NS} ns */
 export async function main(ns) {
 	createCSS(fireworkStyles);
-  const pyro = document.createElement('div');
+  const pyro = doc.createElement('div');
   pyro.classList = "pyro";
-  document.body.appendChild(pyro);
+  doc.body.appendChild(pyro);
 
-  const before = document.createElement('div');
+  const before = doc.createElement('div');
   before.classList = "before";
   pyro.appendChild(before);
 
-  const after = document.createElement('div');
+  const after = doc.createElement('div');
   after.classList = "after";
   pyro.appendChild(after);
 
