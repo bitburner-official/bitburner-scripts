@@ -1,11 +1,16 @@
 # bitburner-scripts
 Repository of Bitburner scripts
+By Sylvm for Sylvm
+Open for look and copy
 
-These scripts help demonstrate the possibilities that bitburner offers, however
-they are insufficient to complete the game.
-
-Most of these scripts can be run with `--help` to explain what they do and how they should be used.
-
-Example:
-
-	run find_server.js --help
+These scripts setup a complete logic including the componants:
+* "break server"
+* "faction management"
+* "Constraint"
+* "Hacknet"
+* "Controler"
+* "Stock market manipulation"
+* "Create Server"
+* "hacking"
+* "Create and/or buy programs" 
+* "infiltrate" 
