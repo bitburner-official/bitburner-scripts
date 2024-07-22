@@ -8,7 +8,8 @@ export async function main(ns) {
         ns.tprint(`> run ${ns.getScriptName()} n00dles`);
         return;
     }
-    const ram = ns.getServerRam(server);
+    const maxram = ns.getServerMaxRam(server);
+    const usedram = ns.getServerUsedRam(server);
     const money = ns.getServerMoneyAvailable(server);
     const maxMoney = ns.getServerMaxMoney(server);
     const minSec = ns.getServerMinSecurityLevel(server);
@@ -16,7 +17,7 @@ export async function main(ns) {
     ns.tprint(`
 
 ${server}:
-    RAM        : ${ram[1]} / ${ram[0]} (${ram[1] / ram[0] * 100}%)
+    RAM        : ${usedram} / ${maxram} (${usedram / maxram * 100}%)
     $          : ${ns.nFormat(money, "$0.000a")} / ${ns.nFormat(maxMoney, "$0.000a")} (${(money / maxMoney * 100).toFixed(2)}%)
     security   : ${minSec.toFixed(2)} / ${sec.toFixed(2)}
     growth     : ${ns.getServerGrowth(server)}
