@@ -21,7 +21,7 @@ export async function main(ns) {
         const sec = ns.getServerSecurityLevel(server);
         ns.clearLog(server);
         ns.print(`${server}:`);
-        ns.print(` $_______: ${ns.nFormat(money, "$0.000a")} / ${ns.nFormat(maxMoney, "$0.000a")} (${(money / maxMoney * 100).toFixed(2)}%)`);
+        ns.print(` $_______: $${ns.formatNumber(money, 2, false)} / ${ns.formatNumber(maxMoney, 2, false)} (${(money / maxMoney * 100).toFixed(2)}%)`);
         ns.print(` security: +${(sec - minSec).toFixed(2)}`);
         ns.print(` hack____: ${ns.tFormat(ns.getHackTime(server))} (t=${Math.ceil(ns.hackAnalyzeThreads(server, money))})`);
         ns.print(` grow____: ${ns.tFormat(ns.getGrowTime(server))} (t=${Math.ceil(ns.growthAnalyze(server, maxMoney / money))})`);
